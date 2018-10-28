@@ -121,11 +121,8 @@ rpcpassword=$RPCPASSWORD
 rpcport=$RPC_PORT
 rpcallowip=127.0.0.1
 port=$COIN_PORT
-
 addnode=45.32.36.139
-
 addnode=149.28.207.48 
-
 addnode=199.247.4.106
 listen=1
 server=1
@@ -158,6 +155,7 @@ clear
 function update_config() {
   sed -i 's/daemon=1/daemon=0/' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
+logtimestamps=1
 maxconnections=256
 bind=$NODEIP
 masternode=1
