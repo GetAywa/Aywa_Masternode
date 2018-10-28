@@ -43,7 +43,7 @@ function install_sentinel() {
   apt-get -y install python-virtualenv virtualenv >/dev/null 2>&1
   git clone $SENTINEL_REPO ~/.aywacore/sentinel >/dev/null 2>&1
   cd ~/.aywacore/sentinel
-  mv ./sntinel/* .
+  mv ./sentinel/* .
   virtualenv ./venv >/dev/null 2>&1
   ./venv/bin/pip install -r requirements.txt >/dev/null 2>&1
   echo  "* * * * * cd ~/.aywacore/sentinel && ./venv/bin/python bin/sentinel.py >> ~/.aywacore/sentinel.log 2>&1" > ~/.aywacore/aywacore.cron
